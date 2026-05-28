@@ -28,4 +28,41 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // ─── Carrusel accesible ──────────────────────────────────────
+  // Botones reales (<button>), slides ocultos con el atributo
+  // HTML "hidden" para que estén fuera del árbol de accesibilidad
+  // mientras no son la diapositiva activa. aria-live="polite" en el
+  // contenedor anuncia el caption cuando cambia la diapositiva.
+  var carrusel = document.querySelector('.carrusel');
+
+  if (carrusel) {
+    var slides = carrusel.querySelectorAll('.carrusel-slide');
+    var btnPrev = carrusel.querySelector('.carrusel-btn.prev');
+    var btnNext = carrusel.querySelector('.carrusel-btn.next');
+    var indiceActivo = 0;
+
+    function mostrarSlide(indice) {
+      slides.forEach(function (slide, i) {
+        if (i === indice) {
+          slide.removeAttribute('hidden');
+        } else {
+          slide.setAttribute('hidden', '');
+        }
+      });
+      indiceActivo = indice;
+    }
+
+    if (btnPrev) {
+      btnPrev.addEventListener('click', function () {
+        mostrarSlide((indiceActivo - 1 + slides.length) % slides.length);
+      });
+    }
+
+    if (btnNext) {
+      btnNext.addEventListener('click', function () {
+        mostrarSlide((indiceActivo + 1) % slides.length);
+      });
+    }
+  }
+
 });

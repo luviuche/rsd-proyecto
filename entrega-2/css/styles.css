@@ -726,8 +726,11 @@ h1, h2, h3, h4 {
 .incluido::before { content: "✓ "; }
 .no-incluido::before { content: "✕ "; }
 
-/* === Página Proyectos (legado) === */
+/* ============================================================
+   Página Proyectos
+   ============================================================ */
 
+/* ─── Carrusel accesible ─── */
 .carrusel {
   position: relative;
   max-width: 800px;
@@ -737,7 +740,11 @@ h1, h2, h3, h4 {
 
 .carrusel-slides {
   position: relative;
-  height: 350px;
+  height: 280px;
+}
+
+@media (min-width: 600px) {
+  .carrusel-slides { height: 350px; }
 }
 
 .carrusel-slide {
@@ -746,6 +753,10 @@ h1, h2, h3, h4 {
   left: 0;
   width: 100%;
   height: 100%;
+  margin: 0;
+}
+
+.carrusel-slide[hidden] {
   display: none;
 }
 
@@ -761,45 +772,65 @@ h1, h2, h3, h4 {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.78);
   color: var(--blanco);
   padding: 15px 20px;
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 1.4;
 }
 
 .carrusel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.95);
   color: var(--negro);
-  font-size: 36px;
+  font-size: 32px;
   font-weight: bold;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
+  font-family: inherit;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
   cursor: pointer;
-  user-select: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
+
+.carrusel-btn:hover { background: var(--blanco); }
 
 .carrusel-btn.prev { left: 10px; }
 .carrusel-btn.next { right: 10px; }
 
+/* ─── Galería de proyectos ─── */
 .galeria-proyectos {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
   gap: 25px;
-  margin-top: 25px;
+}
+
+@media (min-width: 600px) {
+  .galeria-proyectos { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1000px) {
+  .galeria-proyectos { grid-template-columns: repeat(3, 1fr); }
 }
 
 .proyecto-tarjeta {
   background: var(--blanco);
   border: 1px solid var(--gris-200);
   overflow: hidden;
+  height: 100%;
 }
 
-.proyecto-tarjeta img {
+.proyecto-imagen {
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -820,10 +851,15 @@ h1, h2, h3, h4 {
   margin: 0 0 10px 0;
 }
 
-.proyecto-info a {
+.enlace-proyecto {
   color: var(--rojo);
   font-size: 14px;
   text-decoration: underline;
+  display: inline-block;
+}
+
+.enlace-proyecto:hover {
+  color: var(--rojo-oscuro);
 }
 
 /* === Página Contacto (legado) === */
