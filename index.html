@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSD Ingeniería Eléctrica — Proyecto Factores Humanos</title>
+  <meta name="description" content="Portada del proyecto académico: sitio web ficticio de RSD Ingeniería Eléctrica evaluado bajo WCAG 2.1 AA.">
+  <style>
+    :root {
+      --rojo: #C8102E;
+      --negro: #1a1a1a;
+      --gris-claro: #f4f4f4;
+      --gris-borde: #d0d0d0;
+      --blanco: #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--negro);
+      background: var(--blanco);
+      line-height: 1.6;
+    }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--rojo);
+      outline-offset: 2px;
+    }
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--negro);
+      color: var(--blanco);
+      padding: 0.75rem 1rem;
+      z-index: 100;
+    }
+    .skip-link:focus { left: 0; }
+    header {
+      background: var(--negro);
+      color: var(--blanco);
+      padding: 1.5rem 1rem;
+    }
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .header-inner img { height: 48px; width: auto; }
+    .header-inner h1 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
+    }
+    main > p {
+      font-size: 1.05rem;
+      max-width: 70ch;
+    }
+    h2 {
+      margin-top: 2.5rem;
+      border-bottom: 2px solid var(--rojo);
+      padding-bottom: 0.5rem;
+    }
+    .entregas {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .entregas { grid-template-columns: 1fr 1fr; }
+    }
+    .entrega-card {
+      display: block;
+      padding: 1.5rem;
+      border: 1px solid var(--gris-borde);
+      border-radius: 6px;
+      background: var(--gris-claro);
+      color: var(--negro);
+      text-decoration: none;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .entrega-card:hover,
+    .entrega-card:focus-visible {
+      border-color: var(--rojo);
+      transform: translateY(-2px);
+    }
+    .entrega-card h3 {
+      margin: 0 0 0.5rem;
+      color: var(--rojo);
+    }
+    .entrega-card p { margin: 0; }
+    footer {
+      border-top: 1px solid var(--gris-borde);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      color: #555;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header>
+    <div class="header-inner">
+      <img src="recursos/logo-rsd.png" alt="Logo de RSD Ingeniería Eléctrica">
+      <h1>RSD Ingeniería Eléctrica — Proyecto Factores Humanos</h1>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <p>
+      Proyecto académico para la materia <strong>Factores Humanos</strong>.
+      Sitio web ficticio de la empresa RSD Ingeniería Eléctrica S.A.S.,
+      construido en dos versiones para comparar el impacto de la accesibilidad
+      y la usabilidad bajo el estándar <strong>WCAG 2.1 nivel AA</strong>.
+    </p>
+
+    <h2>Entregas del proyecto</h2>
+    <div class="entregas">
+      <a class="entrega-card" href="entrega-1/index.html">
+        <h3>Entrega 1 — Versión con errores</h3>
+        <p>
+          Sitio funcional con errores deliberados de accesibilidad y usabilidad,
+          pensado para ser evaluado con TAW, WAVE, Lighthouse y validadores W3C.
+        </p>
+      </a>
+      <a class="entrega-card" href="entrega-2/index.html">
+        <h3>Entrega 2 — Versión corregida</h3>
+        <p>
+          Sitio rediseñado siguiendo las pautas WCAG 2.1 AA, donde se corrigen
+          todos los errores detectados en la evaluación de la entrega 1.
+        </p>
+      </a>
+    </div>
+
+    <h2>Documentación</h2>
+    <ul>
+      <li><a href="README.md">README del proyecto</a></li>
+      <li><a href="informes/mapa-errores.md">Mapa de errores deliberados de la entrega 1</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>Proyecto académico — Materia Factores Humanos — 2026</p>
+  </footer>
+</body>
+</html>

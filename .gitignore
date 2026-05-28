@@ -1,0 +1,15 @@
+# Configuración del IDE
+.idea/
+*.iml
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+*.swp
+*.swo
+*~
+
+# Dependencias (por si en algún momento se usa Node)
+node_modules/
