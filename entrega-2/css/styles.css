@@ -862,69 +862,184 @@ h1, h2, h3, h4 {
   color: var(--rojo-oscuro);
 }
 
-/* === Página Contacto (legado) === */
+/* ============================================================
+   Página Contacto
+   ============================================================ */
 
 .contacto-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1fr;
+  gap: 30px;
   margin-top: 25px;
 }
 
+@media (min-width: 800px) {
+  .contacto-grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* Formulario */
 .formulario {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
 }
 
-.formulario input[type="text"],
-.formulario input[type="email"],
-.formulario input[type="tel"],
-.formulario textarea {
-  border: 1px solid var(--gris-300);
-  padding: 10px 12px;
-  font-size: 14px;
-  font-family: inherit;
-  width: 100%;
+.nota-requeridos {
+  font-size: 13px;
+  color: var(--gris-600);
+  margin: 0;
 }
 
-.formulario textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.formulario .grupo { margin: 5px 0; }
-
-.formulario .grupo p {
-  margin: 0 0 8px 0;
-  font-size: 14px;
+.requerido {
+  color: var(--rojo);
   font-weight: bold;
 }
 
-.formulario .grupo label {
-  display: inline-block;
-  margin-right: 15px;
-  font-size: 14px;
+/* Cada par etiqueta + input + error */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.formulario .error {
-  border: 2px solid var(--rojo) !important;
+.campo label {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--gris-800);
+}
+
+.campo input,
+.campo textarea {
+  border: 1px solid var(--gris-300);
+  padding: 10px 12px;
+  font-size: 15px;
+  font-family: inherit;
+  border-radius: var(--radius);
+  background: var(--blanco);
+  color: var(--gris-800);
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.campo input:focus-visible,
+.campo textarea:focus-visible {
+  border-color: var(--rojo);
+  outline: 3px solid var(--foco);
+  outline-offset: 1px;
+}
+
+/* Estado de error — texto + borde + fondo (no solo color) */
+.campo input[aria-invalid="true"],
+.campo textarea[aria-invalid="true"] {
+  border-color: var(--rojo);
+  border-width: 2px;
   background: #fff5f5;
 }
 
+.mensaje-error {
+  display: block;
+  color: var(--error);
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.mensaje-error::before {
+  content: "⚠ ";
+  font-weight: bold;
+}
+
+/* Fieldsets para radios y checkboxes */
+.grupo-fieldset {
+  border: 1px solid var(--gris-200);
+  border-radius: var(--radius);
+  padding: 12px 18px 14px;
+  margin: 0;
+}
+
+.grupo-fieldset legend {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--gris-800);
+  padding: 0 6px;
+}
+
+.opciones-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.opcion input {
+  /* tamaño táctil mínimo razonable */
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Botón Enviar como <button> real */
 .boton-enviar {
   background: var(--rojo);
   color: var(--blanco);
-  padding: 12px 25px;
+  padding: 12px 28px;
   font-weight: bold;
   font-size: 15px;
+  font-family: inherit;
+  border: 2px solid var(--rojo);
+  border-radius: var(--radius);
   cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  user-select: none;
   align-self: flex-start;
 }
 
+.boton-enviar:hover {
+  background: var(--rojo-oscuro);
+  border-color: var(--rojo-oscuro);
+}
+
+.boton-enviar:focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 3px;
+}
+
+/* Status del envío (sustituye al alert()) */
+.form-status {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 1em;
+}
+
+.form-status--ok {
+  color: var(--exito);
+  padding: 12px 14px;
+  background: #e7f4ea;
+  border-left: 4px solid var(--exito);
+}
+
+.form-status--error {
+  color: var(--error);
+  padding: 12px 14px;
+  background: #fdecee;
+  border-left: 4px solid var(--rojo);
+}
+
+/* Columna de datos de contacto */
 .info-contacto {
   font-size: 15px;
   line-height: 1.7;
@@ -932,9 +1047,20 @@ h1, h2, h3, h4 {
 
 .info-contacto h3 {
   color: var(--rojo);
-  margin: 0 0 15px 0;
+  margin: 0 0 10px 0;
+  font-size: 18px;
 }
 
+.info-contacto p { margin: 0 0 18px 0; }
+
+.info-contacto a {
+  color: var(--rojo);
+  text-decoration: underline;
+}
+
+.info-contacto a:hover { color: var(--rojo-oscuro); }
+
+/* Mapa */
 .mapa-contacto {
   margin-top: 30px;
   border: 1px solid var(--gris-200);
