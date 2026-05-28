@@ -1,105 +1,97 @@
-  <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="es-CO">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio</title>
+  <title>RSD Ingeniería Eléctrica S.A.S. — Soluciones eléctricas para empresas en Colombia</title>
+  <meta name="description" content="Diseño, instalación, mantenimiento y consultoría eléctrica con certificación RETIE. Bogotá, Colombia.">
   <link rel="stylesheet" href="css/styles.css">
-
-  <!-- Estilos inline mezclados con HTML (mala práctica de organización) -->
-  <style>
-    .hero-text h1 {
-      letter-spacing: 1px;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Encabezado sin landmark <nav> -->
-  <div class="header">
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <header class="site-header">
     <div class="header-inner">
-      <img src="img/logo.png" class="logo">
-      <div class="nav">
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="contacto.html">Contacto</a>
+      <a href="index.html" class="logo-link" aria-label="RSD Ingeniería Eléctrica — Ir al inicio">
+        <img src="img/logo.png" alt="" class="logo">
+        <span class="logo-text">RSD Ingeniería Eléctrica</span>
+      </a>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" aria-labelledby="hero-titulo">
+      <img src="img/hero.svg" alt="Ingenieros eléctricos supervisando una subestación industrial" class="hero-img">
+      <div class="hero-text">
+        <h1 id="hero-titulo">RSD Ingeniería Eléctrica</h1>
+        <p>Energía que conecta, ingeniería que transforma.</p>
+        <a href="contacto.html" class="cta">Solicita una cotización</a>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- Hero (sin landmark <main>) -->
-  <div class="hero">
-    <img src="img/hero.svg" class="hero-img">
-    <div class="hero-text">
-      <h1>RSD Ingeniería Eléctrica</h1>
-      <p>Energía que conecta, ingeniería que transforma.</p>
-      <div class="cta" onclick="window.location.href='contacto.html'">
-        Solicita una cotización
-      </div>
-    </div>
-  </div>
+    <div class="contenido-principal">
 
-  <div class="contenido-principal">
+      <section class="servicios-resumen" aria-labelledby="servicios-titulo">
+        <h2 id="servicios-titulo">Qué hacemos</h2>
+        <p>En RSD Ingeniería Eléctrica ofrecemos soluciones técnicas integrales para empresas, instituciones y proyectos industriales en todo el territorio colombiano. Nuestro equipo combina experiencia técnica, normativa vigente y un enfoque centrado en la eficiencia.</p>
 
-    <!-- Salto de jerarquía: h1 → h3 (se omite h2) -->
-    <div class="servicios-resumen">
-      <h3>Qué hacemos</h3>
-      <p>En RSD Ingeniería Eléctrica ofrecemos soluciones técnicas integrales para empresas, instituciones y proyectos industriales en todo el territorio colombiano. Nuestro equipo combina experiencia técnica, normativa vigente y un enfoque centrado en la eficiencia.</p>
-
-      <div class="grid-servicios">
-        <div class="servicio-card">
-          <h3>Diseño eléctrico</h3>
-          <p>Diseño de instalaciones eléctricas residenciales, comerciales e industriales con cumplimiento normativo.</p>
+        <div class="grid-servicios">
+          <article class="servicio-card">
+            <h3>Diseño eléctrico</h3>
+            <p>Diseño de instalaciones eléctricas residenciales, comerciales e industriales con cumplimiento normativo.</p>
+          </article>
+          <article class="servicio-card">
+            <h3>Mantenimiento industrial</h3>
+            <p>Mantenimiento preventivo y correctivo de instalaciones eléctricas en plantas y centros de operación.</p>
+          </article>
+          <article class="servicio-card">
+            <h3>Paneles solares</h3>
+            <p>Instalación y puesta en marcha de sistemas fotovoltaicos para autoconsumo o respaldo energético.</p>
+          </article>
+          <article class="servicio-card">
+            <h3>Certificación RETIE</h3>
+            <p>Acompañamiento en procesos de certificación bajo el Reglamento Técnico de Instalaciones Eléctricas.</p>
+          </article>
         </div>
-        <div class="servicio-card">
-          <h3>Mantenimiento industrial</h3>
-          <p>Mantenimiento preventivo y correctivo de instalaciones eléctricas en plantas y centros de operación.</p>
-        </div>
-        <div class="servicio-card">
-          <h3>Paneles solares</h3>
-          <p>Instalación y puesta en marcha de sistemas fotovoltaicos para autoconsumo o respaldo energético.</p>
-        </div>
-        <div class="servicio-card">
-          <h3>Certificación RETIE</h3>
-          <p>Acompañamiento en procesos de certificación bajo el Reglamento Técnico de Instalaciones Eléctricas.</p>
-        </div>
-      </div>
+      </section>
+
+      <section class="por-que" aria-labelledby="por-que-titulo">
+        <h2 id="por-que-titulo">Por qué elegirnos</h2>
+        <ul class="lista-beneficios">
+          <li>Más de 12 años de experiencia en el sector eléctrico colombiano.</li>
+          <li>Equipo de ingenieros certificados y técnicos especializados.</li>
+          <li>Cumplimiento estricto de la normativa RETIE y NTC.</li>
+          <li>Cobertura nacional con base en Bogotá.</li>
+          <li>Atención personalizada y respuesta rápida a cotizaciones.</li>
+        </ul>
+      </section>
+
+      <section class="cta-final" aria-labelledby="cta-final-titulo">
+        <h2 id="cta-final-titulo">¿Listo para tu próximo proyecto?</h2>
+        <p>Escríbenos y un asesor te contactará en menos de 24 horas hábiles.</p>
+        <a href="contacto.html" class="cta">Contáctanos ahora</a>
+      </section>
+
     </div>
 
-    <div class="por-que">
-      <h3>Por qué elegirnos</h3>
-      <ul>
-        <li>Más de 12 años de experiencia en el sector eléctrico colombiano.</li>
-        <li>Equipo de ingenieros certificados y técnicos especializados.</li>
-        <li>Cumplimiento estricto de la normativa RETIE y NTC.</li>
-        <li>Cobertura nacional con base en Bogotá.</li>
-        <li>Atención personalizada y respuesta rápida a cotizaciones.</li>
-      </ul>
-    </div>
+  </main>
 
-    <div class="cta-final">
-      <h3>¿Listo para tu próximo proyecto?</h3>
-      <p>Escríbenos y un asesor te contactará en menos de 24 horas hábiles.</p>
-      <div class="cta" onclick="window.location.href='contacto.html'">
-        Contáctanos ahora
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Pie de página -->
-  <div class="footer">
+  <footer class="site-footer">
     <p>© 2026 RSD Ingeniería Eléctrica S.A.S. — Bogotá, Colombia</p>
-    <p>Tel: (601) 555-0123 | <a href="mailto:contacto@rsd-ingenieria.com.co">contacto@rsd-ingenieria.com.co</a></p>
-  </div>
+    <p>Tel: <a href="tel:+576015550123">(601) 555-0123</a> | <a href="mailto:contacto@rsd-ingenieria.com.co">contacto@rsd-ingenieria.com.co</a></p>
+  </footer>
 
   <script src="js/main.js"></script>
-
-  <!-- Script inline (mala práctica) -->
-  <script>
-    console.log("Bienvenido a RSD Ingeniería");
-  </script>
 </body>
 </html>
