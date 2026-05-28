@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos - RSD Ingeniería Eléctrica</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Encabezado sin landmarks -->
+  <div class="header">
+    <div class="header-inner">
+      <img src="img/logo.png" class="logo">
+      <!-- Navegación con orden distinto a las otras páginas -->
+      <div class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="servicios.html">Servicios</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="titulo-pagina">
+    <h1>Proyectos destacados</h1>
+  </div>
+
+  <div class="seccion-nosotros">
+    <h3>Algunos de nuestros proyectos recientes</h3>
+
+    <!-- Carrusel sin controles accesibles por teclado -->
+    <div class="carrusel">
+      <div class="carrusel-slides">
+        <div class="carrusel-slide">
+          <img src="img/proyecto-1.svg">
+          <div class="carrusel-caption">Sistema fotovoltaico 50 kWp — Bodega logística, Funza, Cundinamarca</div>
+        </div>
+        <div class="carrusel-slide">
+          <img src="img/proyecto-2.svg">
+          <div class="carrusel-caption">Repotenciación de subestación 13.2 kV — Industria minera, Antioquia</div>
+        </div>
+        <div class="carrusel-slide">
+          <img src="img/proyecto-3.svg">
+          <div class="carrusel-caption">Modernización de tableros eléctricos — Edificio corporativo, Bogotá</div>
+        </div>
+      </div>
+      <div class="carrusel-btn prev" onclick="prevSlide()">&lsaquo;</div>
+      <div class="carrusel-btn next" onclick="nextSlide()">&rsaquo;</div>
+    </div>
+  </div>
+
+  <div class="seccion-nosotros">
+    <h3>Galería de proyectos</h3>
+    <p>Explore una selección de los proyectos que hemos ejecutado en distintos sectores del país.</p>
+
+    <!-- Tarjetas con id repetido y enlaces de texto poco descriptivo -->
+    <div class="galeria-proyectos">
+
+      <div class="proyecto-tarjeta" id="card-proyecto">
+        <img src="img/proyecto-1.svg">
+        <div class="proyecto-info">
+          <h3>Sistema fotovoltaico industrial</h3>
+          <p>Instalación de 200 paneles solares y 4 inversores en bodega logística de 3.000 m².</p>
+          <a href="#">click aquí</a>
+        </div>
+      </div>
+
+      <div class="proyecto-tarjeta" id="card-proyecto">
+        <img src="img/proyecto-2.svg">
+        <div class="proyecto-info">
+          <h3>Línea de media tensión</h3>
+          <p>Repotenciación de subestación 13.2 kV para operación minera en el norte de Antioquia.</p>
+          <a href="#">ver más</a>
+        </div>
+      </div>
+
+      <div class="proyecto-tarjeta" id="card-proyecto">
+        <img src="img/proyecto-3.svg">
+        <div class="proyecto-info">
+          <h3>Modernización de tableros</h3>
+          <p>Sustitución de tableros principales y secundarios en edificio corporativo de 12 pisos.</p>
+          <a href="#">leer</a>
+        </div>
+      </div>
+
+      <div class="proyecto-tarjeta" id="card-proyecto">
+        <img src="img/proyecto-4.svg">
+        <div class="proyecto-info">
+          <h3>Iluminación LED de planta</h3>
+          <p>Cambio integral a luminarias LED en planta de producción, con ahorro estimado del 38%.</p>
+          <a href="#">click aquí</a>
+        </div>
+      </div>
+
+      <div class="proyecto-tarjeta" id="card-proyecto">
+        <img src="img/proyecto-1.svg">
+        <div class="proyecto-info">
+          <h3>Sistema solar residencial</h3>
+          <p>Instalación fotovoltaica de 8 kWp en conjunto residencial campestre en Chía.</p>
+          <a href="#">ver más</a>
+        </div>
+      </div>
+
+      <div class="proyecto-tarjeta" id="card-proyecto">
+        <img src="img/proyecto-3.svg">
+        <div class="proyecto-info">
+          <h3>Certificación RETIE</h3>
+          <p>Acompañamiento técnico para certificación de instalaciones en conjunto residencial — Chía.</p>
+          <a href="#">click aquí</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Pie de página sin landmark -->
+  <div class="footer">
+    <p>© 2026 RSD Ingeniería Eléctrica S.A.S. — Bogotá, Colombia</p>
+    <p>Tel: (601) 555-0123 | <a href="mailto:contacto@rsd-ingenieria.com.co">contacto@rsd-ingenieria.com.co</a></p>
+  </div>
+
+  <script src="js/main.js"></script>
+
+  <!-- Script inline del carrusel, sin manejo de teclado ni anuncios para lectores de pantalla -->
+  <script>
+    var slideActual = 0;
+    var totalSlides = 3;
+
+    function mostrarSlide(indice) {
+      var slides = document.querySelectorAll('.carrusel-slide');
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = i === indice ? 'block' : 'none';
+      }
+    }
+
+    function prevSlide() {
+      slideActual = (slideActual - 1 + totalSlides) % totalSlides;
+      mostrarSlide(slideActual);
+    }
+
+    function nextSlide() {
+      slideActual = (slideActual + 1) % totalSlides;
+      mostrarSlide(slideActual);
+    }
+
+    mostrarSlide(0);
+  </script>
+</body>
+</html>

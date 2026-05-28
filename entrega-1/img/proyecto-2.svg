@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#3a1a25"/>
+      <stop offset="100%" stop-color="#7a1525"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#g2)"/>
+  <rect y="200" width="400" height="50" fill="#0a0a0a"/>
+  <path d="M0,80 Q100,100 200,90 T400,80" stroke="#aaa" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M0,100 Q100,120 200,110 T400,100" stroke="#aaa" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <g stroke="#bbb" stroke-width="2" fill="#1a1a1a">
+    <polygon points="80,200 110,200 102,70 88,70"/>
+    <polygon points="200,200 230,200 222,50 208,50"/>
+    <polygon points="320,200 350,200 342,70 328,70"/>
+  </g>
+  <g stroke="#bbb" stroke-width="2" fill="none">
+    <line x1="70" y1="90" x2="120" y2="90"/>
+    <line x1="75" y1="110" x2="115" y2="110"/>
+    <line x1="190" y1="70" x2="240" y2="70"/>
+    <line x1="195" y1="90" x2="235" y2="90"/>
+    <line x1="310" y1="90" x2="360" y2="90"/>
+    <line x1="315" y1="110" x2="355" y2="110"/>
+  </g>
+</svg>
