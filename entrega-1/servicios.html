@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - RSD Ingeniería Eléctrica</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Encabezado sin landmarks -->
+  <div class="header">
+    <div class="header-inner">
+      <img src="img/logo.png" class="logo">
+      <!-- Navegación con orden distinto a las otras páginas -->
+      <div class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="titulo-pagina">
+    <h1>Nuestros servicios</h1>
+  </div>
+
+  <div class="seccion-nosotros">
+    <h3>Soluciones eléctricas para empresas e industria</h3>
+    <p>Ofrecemos un portafolio integral de servicios eléctricos, desde el diseño y la instalación hasta el mantenimiento y la certificación normativa.</p>
+
+    <div class="grid-servicios-detallado">
+      <div class="servicio-item">
+        <img src="img/icono-diseno.svg">
+        <h3>Diseño eléctrico</h3>
+        <p>Planos y memorias técnicas para proyectos residenciales, comerciales e industriales.</p>
+      </div>
+      <div class="servicio-item">
+        <img src="img/icono-mantenimiento.svg">
+        <h3>Mantenimiento industrial</h3>
+        <p>Mantenimiento preventivo y correctivo de instalaciones eléctricas en plantas.</p>
+      </div>
+      <div class="servicio-item">
+        <img src="img/icono-solar.svg">
+        <h3>Paneles solares</h3>
+        <p>Diseño e instalación de sistemas fotovoltaicos para autoconsumo o respaldo.</p>
+      </div>
+      <div class="servicio-item">
+        <img src="img/icono-retie.svg">
+        <h3>Certificación RETIE</h3>
+        <p>Acompañamiento en procesos de certificación bajo el reglamento técnico colombiano.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion-nosotros">
+    <h3>Detalle de servicios</h3>
+    <!-- Acordeón con <div onclick>, sin role, sin aria-expanded, sin tabindex -->
+    <div class="acordeon">
+
+      <div class="acordeon-item">
+        <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+          Diseño de instalaciones eléctricas
+        </div>
+        <div class="acordeon-contenido">
+          <p>Realizamos el diseño de instalaciones eléctricas residenciales, comerciales e industriales bajo la normativa RETIE y la NTC 2050. El servicio incluye planos eléctricos, memorias técnicas, cálculos de cargas, diagramas unifilares y especificaciones de materiales.</p>
+        </div>
+      </div>
+
+      <div class="acordeon-item">
+        <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+          Mantenimiento eléctrico industrial
+        </div>
+        <div class="acordeon-contenido">
+          <p>Programas de mantenimiento preventivo y correctivo para plantas industriales, centros logísticos y edificios institucionales. Incluye termografía, análisis de calidad de energía, revisión de tableros y puestas a tierra.</p>
+        </div>
+      </div>
+
+      <div class="acordeon-item">
+        <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+          Energías renovables
+        </div>
+        <div class="acordeon-contenido">
+          <p>Instalación de sistemas fotovoltaicos conectados a la red o autónomos, dimensionamiento del banco de baterías, instalación de inversores y trámites ante el operador de red para la conexión local.</p>
+        </div>
+      </div>
+
+      <div class="acordeon-item">
+        <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+          Consultoría en eficiencia energética
+        </div>
+        <div class="acordeon-contenido">
+          <p>Auditorías energéticas para identificar oportunidades de ahorro, planes de mejora, sustitución de luminarias por LED, optimización de motores eléctricos y campañas de uso racional de la energía.</p>
+        </div>
+      </div>
+
+      <div class="acordeon-item">
+        <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+          Certificación RETIE
+        </div>
+        <div class="acordeon-contenido">
+          <p>Acompañamiento técnico y documental para que sus instalaciones cumplan con el Reglamento Técnico de Instalaciones Eléctricas. Incluye inspección preliminar, ajustes y gestión con organismos de certificación acreditados.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="seccion-nosotros">
+    <h3>Planes de servicio</h3>
+    <p>Compare nuestros tres planes según las necesidades de su empresa.</p>
+
+    <!-- Tabla de datos sin <th> ni scope; indicadores codificados solo por color -->
+    <table class="tabla-planes">
+      <tr>
+        <td></td>
+        <td>Básico</td>
+        <td>Profesional</td>
+        <td>Empresarial</td>
+      </tr>
+      <tr>
+        <td>Diseño eléctrico</td>
+        <td><span class="ind-si"></span></td>
+        <td><span class="ind-si"></span></td>
+        <td><span class="ind-si"></span></td>
+      </tr>
+      <tr>
+        <td>Mantenimiento preventivo</td>
+        <td><span class="ind-no"></span></td>
+        <td><span class="ind-si"></span></td>
+        <td><span class="ind-si"></span></td>
+      </tr>
+      <tr>
+        <td>Termografía</td>
+        <td><span class="ind-no"></span></td>
+        <td><span class="ind-no"></span></td>
+        <td><span class="ind-si"></span></td>
+      </tr>
+      <tr>
+        <td>Asesoría RETIE</td>
+        <td><span class="ind-no"></span></td>
+        <td><span class="ind-si"></span></td>
+        <td><span class="ind-si"></span></td>
+      </tr>
+      <tr>
+        <td>Soporte 24/7</td>
+        <td><span class="ind-no"></span></td>
+        <td><span class="ind-no"></span></td>
+        <td><span class="ind-si"></span></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Pie de página sin landmark -->
+  <div class="footer">
+    <p>© 2026 RSD Ingeniería Eléctrica S.A.S. — Bogotá, Colombia</p>
+    <p>Tel: (601) 555-0123 | <a href="mailto:contacto@rsd-ingenieria.com.co">contacto@rsd-ingenieria.com.co</a></p>
+  </div>
+
+  <script src="js/main.js"></script>
+
+  <!-- Script inline para el acordeón (sin manejo de teclado ni ARIA) -->
+  <script>
+    function toggleAcordeon(elemento) {
+      var contenido = elemento.nextElementSibling;
+      if (contenido.classList.contains('abierto')) {
+        contenido.classList.remove('abierto');
+      } else {
+        contenido.classList.add('abierto');
+      }
+    }
+  </script>
+</body>
+</html>
