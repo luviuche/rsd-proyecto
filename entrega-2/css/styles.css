@@ -436,60 +436,104 @@ h1, h2, h3, h4 {
 .footer p { margin: 5px 0; }
 .footer a { color: var(--blanco); }
 
-/* === Página Nosotros (legado) === */
+/* ============================================================
+   Página Nosotros
+   ============================================================ */
 
 .titulo-pagina {
   background: var(--rojo);
   color: var(--blanco);
-  padding: 30px 20px;
+  padding: 30px var(--space-md);
   text-align: center;
 }
 
 .titulo-pagina h1 {
   margin: 0;
-  font-size: 32px;
+  font-size: 28px;
+}
+
+@media (min-width: 768px) {
+  .titulo-pagina h1 { font-size: 32px; }
 }
 
 .seccion-nosotros {
   max-width: var(--container);
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 0 var(--space-md);
 }
 
-.seccion-nosotros h3 {
+.seccion-nosotros h2 {
   color: var(--rojo);
-  font-size: 26px;
+  font-size: 24px;
   margin: 0 0 15px 0;
 }
 
-.tabla-mision-vision {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
+@media (min-width: 768px) {
+  .seccion-nosotros h2 { font-size: 26px; }
 }
 
-.tabla-mision-vision td {
-  vertical-align: top;
+/* Párrafo de introducción (reemplazo de <center><font>...) */
+.intro-empresa {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  color: var(--gris-700);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Misión y visión: CSS Grid en vez de <table> */
+.mision-vision {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .mision-vision { grid-template-columns: 1fr 1fr; }
+}
+
+.mv-card {
   padding: 25px;
-  width: 50%;
+  border-left: 4px solid var(--rojo);
 }
 
-.tabla-mision-vision td h3 { margin-top: 0; }
+.mv-card--mision { background: var(--gris-100); }
+.mv-card--vision { background: #fdeeee; }
 
+.mv-card h3 {
+  margin: 0 0 10px 0;
+  color: var(--negro);
+  font-size: 19px;
+}
+
+.mv-card p { margin: 0; }
+
+/* Lista del equipo */
 .equipo-grid {
-  display: flex;
-  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 25px;
-  justify-content: space-around;
-  margin-top: 25px;
+}
+
+@media (min-width: 600px) {
+  .equipo-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1000px) {
+  .equipo-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
 .miembro-equipo {
-  width: 220px;
   text-align: center;
 }
 
-.miembro-equipo img {
+.miembro-avatar {
   width: 140px;
   height: 140px;
   border-radius: 50%;
@@ -500,19 +544,21 @@ h1, h2, h3, h4 {
 .miembro-equipo .nombre {
   font-weight: bold;
   font-size: 16px;
-  margin-bottom: 4px;
+  margin: 0 0 4px 0;
 }
 
 .miembro-equipo .cargo {
   color: var(--gris-500);
   font-size: 14px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
 }
 
+/* Bio del equipo y de la historia: sin justificar (WCAG 1.4.8) */
 .bio-equipo {
-  text-align: justify;
+  text-align: left;
   font-size: 14px;
   color: var(--gris-700);
+  line-height: 1.6;
   margin: 0;
 }
 

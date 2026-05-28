@@ -1,104 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="es-CO">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nosotros - RSD Ingeniería Eléctrica</title>
+  <title>Nosotros — RSD Ingeniería Eléctrica S.A.S.</title>
+  <meta name="description" content="Conoce el equipo, la historia, la misión y la visión de RSD Ingeniería Eléctrica S.A.S.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- Encabezado sin landmarks -->
-  <div class="header">
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <header class="site-header">
     <div class="header-inner">
-      <img src="img/logo.png" class="logo">
-      <!-- Navegación con orden distinto al del index (inconsistencia deliberada) -->
-      <div class="nav">
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="proyectos.html">Proyectos</a>
-      </div>
+      <a href="index.html" class="logo-link" aria-label="RSD Ingeniería Eléctrica — Ir al inicio">
+        <img src="img/logo.png" alt="" class="logo">
+        <span class="logo-text">RSD Ingeniería Eléctrica</span>
+      </a>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <div class="titulo-pagina">
-    <h1>Sobre RSD Ingeniería Eléctrica</h1>
-  </div>
+  <main id="main">
 
-  <!-- Uso de etiquetas obsoletas <center> y <font> -->
-  <div class="seccion-nosotros">
-    <center>
-      <font face="Georgia" size="4" color="#333333">
+    <div class="titulo-pagina">
+      <h1>Sobre RSD Ingeniería Eléctrica</h1>
+    </div>
+
+    <section class="seccion-nosotros" aria-labelledby="intro-titulo">
+      <h2 id="intro-titulo" class="sr-only">Presentación</h2>
+      <p class="intro-empresa">
         Empresa colombiana fundada en 2012, dedicada a brindar soluciones eléctricas
         integrales con altos estándares de calidad técnica y normativa.
-      </font>
-    </center>
-  </div>
+      </p>
+    </section>
 
-  <div class="seccion-nosotros">
-    <h3>Misión y visión</h3>
-    <!-- Maquetación con <table> en lugar de divs/grid -->
-    <table class="tabla-mision-vision">
-      <tr>
-        <td bgcolor="#f4f4f4">
+    <section class="seccion-nosotros" aria-labelledby="mv-titulo">
+      <h2 id="mv-titulo">Misión y visión</h2>
+      <div class="mision-vision">
+        <article class="mv-card mv-card--mision">
           <h3>Misión</h3>
           <p>Brindar servicios de ingeniería eléctrica de alta calidad, contribuyendo al desarrollo industrial y al uso eficiente de la energía en Colombia, mediante un equipo humano comprometido y soluciones técnicas confiables.</p>
-        </td>
-        <td bgcolor="#f9eaea">
+        </article>
+        <article class="mv-card mv-card--vision">
           <h3>Visión</h3>
           <p>Ser reconocidos en 2030 como una de las empresas líderes en ingeniería eléctrica y energías renovables de Colombia, destacándonos por la calidad, la innovación y el cumplimiento normativo.</p>
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="seccion-nosotros">
-    <h3>Nuestra historia</h3>
-    <p class="bio-equipo">RSD Ingeniería Eléctrica S.A.S. fue fundada en Bogotá en el año 2012 por un grupo de profesionales con amplia experiencia en el sector eléctrico industrial. Desde nuestros inicios hemos buscado ofrecer soluciones técnicas confiables, alineadas con la normativa vigente y orientadas a las necesidades reales de cada cliente. A lo largo de más de una década hemos participado en proyectos de instalación, mantenimiento y consultoría energética para empresas privadas y entidades públicas en distintas regiones del país.</p>
-  </div>
-
-  <div class="seccion-nosotros">
-    <h3>Nuestro equipo</h3>
-    <div class="equipo-grid">
-
-      <div class="miembro-equipo">
-        <img src="img/equipo-1.svg">
-        <div class="nombre">Carlos Andrés Ramírez</div>
-        <div class="cargo">Director General</div>
-        <p class="bio-equipo">Ingeniero electricista con más de veinte años de experiencia liderando proyectos industriales y residenciales en Colombia y la región andina.</p>
+        </article>
       </div>
+    </section>
 
-      <div class="miembro-equipo">
-        <img src="img/equipo-2.svg">
-        <div class="nombre">Laura Patricia Méndez</div>
-        <div class="cargo">Gerente Técnica</div>
-        <p class="bio-equipo">Ingeniera eléctrica especialista en diseño de instalaciones de media y baja tensión, certificación RETIE y eficiencia energética.</p>
-      </div>
+    <section class="seccion-nosotros" aria-labelledby="historia-titulo">
+      <h2 id="historia-titulo">Nuestra historia</h2>
+      <p class="bio-equipo">RSD Ingeniería Eléctrica S.A.S. fue fundada en Bogotá en el año 2012 por un grupo de profesionales con amplia experiencia en el sector eléctrico industrial. Desde nuestros inicios hemos buscado ofrecer soluciones técnicas confiables, alineadas con la normativa vigente y orientadas a las necesidades reales de cada cliente. A lo largo de más de una década hemos participado en proyectos de instalación, mantenimiento y consultoría energética para empresas privadas y entidades públicas en distintas regiones del país.</p>
+    </section>
 
-      <div class="miembro-equipo">
-        <img src="img/equipo-3.svg">
-        <div class="nombre">Diego Fernando Quintero</div>
-        <div class="cargo">Jefe de Proyectos</div>
-        <p class="bio-equipo">Responsable del seguimiento técnico y operativo de los proyectos, con experiencia en mantenimiento industrial y montajes eléctricos complejos.</p>
-      </div>
+    <section class="seccion-nosotros" aria-labelledby="equipo-titulo">
+      <h2 id="equipo-titulo">Nuestro equipo</h2>
+      <ul class="equipo-grid">
 
-      <div class="miembro-equipo">
-        <img src="img/equipo-4.svg">
-        <div class="nombre">Sandra Milena Cárdenas</div>
-        <div class="cargo">Coordinadora Comercial</div>
-        <p class="bio-equipo">Lidera la atención al cliente, las cotizaciones y el seguimiento postventa, asegurando una comunicación clara entre el equipo técnico y los clientes.</p>
-      </div>
+        <!-- alt="" porque el nombre y el cargo son texto visible adyacente (WCAG H67). -->
+        <li class="miembro-equipo">
+          <img src="img/equipo-1.svg" alt="" class="miembro-avatar">
+          <p class="nombre">Carlos Andrés Ramírez</p>
+          <p class="cargo">Director General</p>
+          <p class="bio-equipo">Ingeniero electricista con más de veinte años de experiencia liderando proyectos industriales y residenciales en Colombia y la región andina.</p>
+        </li>
 
-    </div>
-  </div>
+        <li class="miembro-equipo">
+          <img src="img/equipo-2.svg" alt="" class="miembro-avatar">
+          <p class="nombre">Laura Patricia Méndez</p>
+          <p class="cargo">Gerente Técnica</p>
+          <p class="bio-equipo">Ingeniera eléctrica especialista en diseño de instalaciones de media y baja tensión, certificación RETIE y eficiencia energética.</p>
+        </li>
 
-  <!-- Pie de página sin landmark -->
-  <div class="footer">
+        <li class="miembro-equipo">
+          <img src="img/equipo-3.svg" alt="" class="miembro-avatar">
+          <p class="nombre">Diego Fernando Quintero</p>
+          <p class="cargo">Jefe de Proyectos</p>
+          <p class="bio-equipo">Responsable del seguimiento técnico y operativo de los proyectos, con experiencia en mantenimiento industrial y montajes eléctricos complejos.</p>
+        </li>
+
+        <li class="miembro-equipo">
+          <img src="img/equipo-4.svg" alt="" class="miembro-avatar">
+          <p class="nombre">Sandra Milena Cárdenas</p>
+          <p class="cargo">Coordinadora Comercial</p>
+          <p class="bio-equipo">Lidera la atención al cliente, las cotizaciones y el seguimiento postventa, asegurando una comunicación clara entre el equipo técnico y los clientes.</p>
+        </li>
+
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
     <p>© 2026 RSD Ingeniería Eléctrica S.A.S. — Bogotá, Colombia</p>
-    <p>Tel: (601) 555-0123 | <a href="mailto:contacto@rsd-ingenieria.com.co">contacto@rsd-ingenieria.com.co</a></p>
-  </div>
+    <p>Tel: <a href="tel:+576015550123">(601) 555-0123</a> | <a href="mailto:contacto@rsd-ingenieria.com.co">contacto@rsd-ingenieria.com.co</a></p>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
